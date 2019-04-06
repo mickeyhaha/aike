@@ -2,7 +2,7 @@
 import requests
 import datetime, time
 
-token=''
+token='01358262d69b4e876e410c0cc9ef2fca3bbab30f4001'
 project_no='723'
 
 #http://www.51ym.me/User/apidocs.html#getmobile
@@ -19,6 +19,7 @@ while True:
         phone = get_phone.content.replace("success|", "")
         print("got phone number: " + phone)
         break
+    print("error getting phone number: " + get_phone.content)
     time.sleep(6)
 
 while True:
@@ -28,6 +29,7 @@ while True:
         sms = get_sms.content.replace("success|", "")
         print("got sms: " + phone)
         break
+    print("error getting sms: " + get_sms.content)
     time.sleep(6)
 
 
