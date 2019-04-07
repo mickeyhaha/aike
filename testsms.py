@@ -31,5 +31,3 @@ while True:
         break
     print("error getting sms: " + get_sms.content)
     time.sleep(6)
-
-
